@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.6.0
+    container_name: elastic
+    ports:
+      - "9200:9200"
+    networks:
+      - es
+    volumes:
+      - elastic:/usr/share/elasticsearch/data
+    environment:
+      - "discovery.type=single-node"
+      - "cluster.name=ESCluster"
+      - "ES_JAVA_OPTS=-Xms768m -Xmx1024m"
+      - "xpack.security.enabled=false"
+      - "node.name=es_node1"
+
+volumes:
+  elastic:
+    driver: local
+
+networks:
+  es:
+    driver: bridge
