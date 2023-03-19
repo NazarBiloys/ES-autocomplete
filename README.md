@@ -69,4 +69,5 @@ attention to `trigrams`, `autocomplete_search` analyzer.
 
 We made 3 errors in word `Elasticsearch`
 
+![image](https://user-images.githubusercontent.com/51129612/226178455-73d904a3-f156-47c8-a0e3-b2d9fbc30b8c.png)
 
